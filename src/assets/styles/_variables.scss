@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+/* variables */
+$blue: #2C7DFA;
+$blue--shade: #3685FF;
+$light-grey: #D5E1EF;
+$grey: #7D889E;
+$dark-navy: #1F314F;
+$white: #FFFFFF;
+
+/* mixins */
+@mixin text {
+    font-family: 'Outfit', sans-serif;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+}

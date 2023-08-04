@@ -1,0 +1,75 @@
+@import './variables';
+main {
+    padding: 5.3125rem 1.6875rem 5.3125rem 1.75rem;
+}
+.card {
+    border-radius: 1.25rem;
+    background: $white;
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+    width: 300px;
+    flex-shrink: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+        border-radius: 0.625rem;
+        background: $blue--shade;
+        width: 18rem;
+        height: 18rem;
+        display: grid;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 10rem;
+            height: 10rem;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 20.5rem;
+            height: 20.5rem;
+            border-radius: 20.5rem;
+            background: $blue;
+            left: 13%;
+            top: 2%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20.5rem;
+            height: 20.5rem;
+            border-radius: 20.5rem;
+            background: $blue;
+            right: -1%;
+            bottom: -24%;
+            transform: translate(50%, 50%);
+        }
+    }
+
+    &__txt {
+        @include text;
+        &--title {
+            color: $dark-navy;
+            font-size: 1.375rem;
+            font-weight: 700;
+        }
+
+        &--subtitle {
+            color: $grey;
+            padding-inline: 1rem;
+            padding-bottom: 0.5rem;
+            font-size: 0.9375rem;
+            font-weight: 400;
+            letter-spacing: 0.01175rem;
+        }
+    }
+}
