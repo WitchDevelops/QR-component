@@ -6,6 +6,6 @@ import Footer from './Footer.js';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>,
 );
